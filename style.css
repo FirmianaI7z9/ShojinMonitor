@@ -1,0 +1,91 @@
+body {
+  background-color: #000000; color: #ffffff; font-family: 'Roboto Condensed';
+}
+
+.container1 {
+  height: 300px; width: 100%; display: flex; flex-wrap: wrap;
+}
+
+.title {
+  margin: 5px; font-size: 24px; height: 30px; width: 100%;
+}
+
+.container2 {
+  height: 260px; position: relative; box-sizing: border-box;
+}
+
+.graph-wrap {
+  position: absolute; top: 0; left: 0; width: 100%;
+}
+
+.circle {
+  scale: 1.2; transform: rotate(-90deg);
+}
+
+.circle circle {
+  fill: none; stroke: #ffffff; stroke-width: 3px; 
+}
+
+.fixed-text1 {
+  position: absolute; top: 85px; left: 0; margin: 0; text-align: center; width: 100%; font-size: 32px;
+}
+
+.fixed-text2 {
+  position: absolute; top: 115px; left: 0; margin: 0; text-align: center; width: 100%; font-size: 28px;
+}
+
+.fixed-text3 {
+  position: absolute; top: 210px; left: 0; margin: 0; text-align: center; width: 100%; font-size: 18px; color: #bbbbbb;
+}
+
+.fixed-text4 {
+  position: absolute; top: 80px; left: 5px; margin: 0; text-align: left; width: 90%; font-size: 18px; color: #bbbbbb;
+}
+
+.fixed-text5 {
+  position: absolute; top: 180px; left: 5px; margin: 0; text-align: left; width: 90%; font-size: 18px; color: #bbbbbb;
+}
+
+.fixed-text6 {
+  position: absolute; top: 57px; left: 5px; margin: 0; text-align: right; width: 90%; font-size: 32px;
+}
+
+.fixed-text7 {
+  position: absolute; top: 87px; left: 5px; margin: 0; text-align: right; width: 90%; font-size: 28px;
+}
+
+.fixed-text8 {
+  position: absolute; top: 172px; left: 5px; margin: 0; text-align: right; width: 90%; font-size: 32px;
+}
+
+.fixed-text9 {
+  position: absolute; top: 20px; left: 5px; margin: 0; text-align: right; width: 40px; font-size: 18px; color: #bbbbbb;
+}
+
+.fixed-text10 {
+  position: absolute; top: 100px; left: 5px; margin: 0; text-align: right; width: 40px; font-size: 18px; color: #bbbbbb;
+}
+
+.fixed-text11 {
+  position: absolute; top: 180px; left: 5px; margin: 0; text-align: right; width: 40px; font-size: 18px; color: #bbbbbb;
+}
+
+.bar {
+  position: absolute; width: 40px; bottom: 70px;
+}
+
+.text-bottom {
+  position: absolute; top: 200px; margin: 0; text-align: left; width: 40px; font-size: 24px; transform: rotate(90deg);
+}
+
+.text-top {
+  position: absolute; margin: 0; text-align: center; width: 70px; font-size: 20px;
+}
+
+.fixed-text12 {
+  position: absolute; top: 4px; left: 0; margin: 0; text-align: center; width: 100%; font-size: 18px; color: #bbbbbb;
+}
+
+.fixed-text13 {
+  position: absolute; top: 34px; left: 0; margin: 0; text-align: center; width: 100%; font-size: 18px; overflow: hidden;
+}
