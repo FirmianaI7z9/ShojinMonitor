@@ -128,7 +128,7 @@ function displayData(data) {
   v326.style.top = (164 - p008 / data["MasterValues"][9]["maxvalue"] * 160).toString() + "px";
   v326.innerText = p008.toString();
   const v400 = document.getElementById("400");
-  v400.innerText = todayA.join(",");
+  v400.innerText = todayA.join(", ");
 
   // OMC
   var todayO = [];
@@ -235,7 +235,7 @@ function displayData(data) {
   v726.style.top = (164 - p108 / data["MasterValues"][19]["maxvalue"] * 160).toString() + "px";
   v726.innerText = p108.toString();
   const v800 = document.getElementById("800");
-  v800.innerText = todayO.join(",");
+  v800.innerText = todayO.join(", ");
 }
 
 function getColor(diff) {
