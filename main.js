@@ -128,10 +128,10 @@ function displayData(data) {
   v326.style.top = (164 - p008 / data["MasterValues"][9]["maxvalue"] * 160).toString() + "px";
   v326.innerText = p008.toString();
   const v400 = document.getElementById("400");
-  todayA.sort((a, b) => { return a["difficulty"] > b["difficulty"]; });
+  todayA.sort((a, b) => { return b["difficulty"] - a["difficulty"]; });
   var a001 = [];
   for (let i = 0; i < todayA.length; i++) a001.push('<span style="color: ' + getCCode(todayA[i]["difficulty"]) + ';">' + todayA[i]["problem_name"] + '</span>');
-  v400.innerText = a001.join(", ");
+  v400.innerHTML = a001.join(", ");
 
   // OMC
   var todayO = [];
@@ -238,10 +238,11 @@ function displayData(data) {
   v726.style.top = (164 - p108 / data["MasterValues"][19]["maxvalue"] * 160).toString() + "px";
   v726.innerText = p108.toString();
   const v800 = document.getElementById("800");
-  todayO.sort((a, b) => { return a["difficulty"] > b["difficulty"]; });
+  todayO.sort((a, b) => { return b["difficulty"] - a["difficulty"]; });
   var a002 = [];
   for (let i = 0; i < todayO.length; i++) a002.push('<span style="color: ' + getCCode(todayO[i]["difficulty"]) + ';">' + todayO[i]["problem_name"] + '</span>');
-  v800.innerText = a002.join(", ");
+  v800.innerHTML = a002.join(", ");
+  console.log(a002);
 }
 
 function getColor(diff) {
