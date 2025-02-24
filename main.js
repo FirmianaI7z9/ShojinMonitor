@@ -242,7 +242,6 @@ function displayData(data) {
   var a002 = [];
   for (let i = 0; i < todayO.length; i++) a002.push('<span style="color: ' + getCCode(todayO[i]["difficulty"]) + ';">' + todayO[i]["problem_name"] + '</span>');
   v800.innerHTML = a002.join(", ");
-  console.log(a002);
 }
 
 function getColor(diff) {
