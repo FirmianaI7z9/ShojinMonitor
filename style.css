@@ -82,6 +82,10 @@ body {
   position: absolute; margin: 0; text-align: center; width: 70px; font-size: 20px;
 }
 
+.crown {
+  position: absolute; margin: 0; text-align: center; width: 70px; height: 20px; font-size: 20px; top: -17px; clip-path: polygon(3px 20px, 0px 4px, 12px 12px, 23px 0px, 34px 12px, 46px 4px, 43px 20px);
+}
+
 .fixed-text12 {
   position: absolute; top: 4px; left: 0; margin: 0; text-align: center; width: 100%; font-size: 18px; color: #bbbbbb;
 }
