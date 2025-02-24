@@ -241,7 +241,7 @@ function displayData(data) {
   todayO.sort((a, b) => { return a["difficulty"] > b["difficulty"]; });
   var a002 = [];
   for (let i = 0; i < todayO.length; i++) a002.push('<span style="color: ' + getCCode(todayO[i]["difficulty"]) + ';">' + todayO[i]["problem_name"] + '</span>');
-  v800.innerText = a001.join(", ");
+  v800.innerText = a002.join(", ");
 }
 
 function getColor(diff) {
