@@ -35,7 +35,7 @@ function displayData(data) {
     totaldiffA[getColor(data["AtCoder"][i]["difficulty"])]++;
     const thisdate = new Date(data["AtCoder"][i]["date"]);
     if (today.toDateString() === thisdate.toDateString()) {
-      todayA.push(data["AtCoder"][i]["problem_name"]);
+      todayA.push(data["AtCoder"][i]);
       todayARPS += data["AtCoder"][i]["RP"];
       todayADS += data["AtCoder"][i]["difficulty"];
       todaydiffA[getColor(data["AtCoder"][i]["difficulty"])]++;
@@ -128,7 +128,10 @@ function displayData(data) {
   v326.style.top = (164 - p008 / data["MasterValues"][9]["maxvalue"] * 160).toString() + "px";
   v326.innerText = p008.toString();
   const v400 = document.getElementById("400");
-  v400.innerText = todayA.join(", ");
+  todayA.sort((a, b) => { return a["difficulty"] > b["difficulty"]; });
+  var a001 = [];
+  for (let i = 0; i < todayA.length; i++) a001.push('<span style="color: ' + getCCode(todayA[i]["difficulty"]) + ';">' + todayA[i]["problem_name"] + '</span>');
+  v400.innerText = a001.join(", ");
 
   // OMC
   var todayO = [];
@@ -142,7 +145,7 @@ function displayData(data) {
     totaldiffO[getColor(data["OMC"][i]["difficulty"])]++;
     const thisdate = new Date(data["OMC"][i]["date"]);
     if (today.toDateString() === thisdate.toDateString()) {
-      todayO.push(data["OMC"][i]["problem_name"]);
+      todayO.push(data["OMC"][i]);
       todayORPS += data["OMC"][i]["RP"];
       todayODS += data["OMC"][i]["difficulty"];
       todaydiffO[getColor(data["OMC"][i]["difficulty"])]++;
@@ -235,7 +238,10 @@ function displayData(data) {
   v726.style.top = (164 - p108 / data["MasterValues"][19]["maxvalue"] * 160).toString() + "px";
   v726.innerText = p108.toString();
   const v800 = document.getElementById("800");
-  v800.innerText = todayO.join(", ");
+  todayO.sort((a, b) => { return a["difficulty"] > b["difficulty"]; });
+  var a002 = [];
+  for (let i = 0; i < todayO.length; i++) a002.push('<span style="color: ' + getCCode(todayO[i]["difficulty"]) + ';">' + todayO[i]["problem_name"] + '</span>');
+  v800.innerText = a001.join(", ");
 }
 
 function getColor(diff) {
@@ -248,4 +254,16 @@ function getColor(diff) {
   else if (diff < 2400) return 5;
   else if (diff < 2800) return 6;
   else return 7;
+}
+
+function getCCode(diff) {
+  if (diff == 0) return "#ffffff";
+  else if (diff < 400) return "#808080";
+  else if (diff < 800) return "#804000";
+  else if (diff < 1200) return "#008000";
+  else if (diff < 1600) return "#00c0c0";
+  else if (diff < 2000) return "#0000ff";
+  else if (diff < 2400) return "#c0c000";
+  else if (diff < 2800) return "#ff8000";
+  else return "#ff0000";
 }
