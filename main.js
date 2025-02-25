@@ -180,7 +180,7 @@ function displayData(data) {
   const v502 = document.getElementById("502");
   const v503 = document.getElementById("503");
   v502.style = "stroke-dasharray: " + (c101 / data["MasterValues"][10]["maxvalue"] * 100.0).toString() + ", 100;";
-  v503.style = "stroke-dasharray: " + (todayO.length / data["MasterValues"][0]["maxvalue"] * 100.0).toString() + ", 100; stroke: #ff0000; stroke-dashoffset: -" + ((c101 - todayO.length) / data["MasterValues"][0]["maxvalue"] * 100.0).toString() + ";";
+  v503.style = "stroke-dasharray: " + (todayO.length / data["MasterValues"][10]["maxvalue"] * 100.0).toString() + ", 100; stroke: #ff0000; stroke-dashoffset: -" + ((c101 - todayO.length) / data["MasterValues"][10]["maxvalue"] * 100.0).toString() + ";";
   const v600 = document.getElementById("600");
   v600.innerText = (data["MasterValues"][41]["maxvalue"] + totalORPS).toString();
   const v601 = document.getElementById("601");
