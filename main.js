@@ -48,7 +48,9 @@ function displayData(data) {
   const v101 = document.getElementById("101");
   v101.innerText = "+" + todayA.length.toString();
   const v102 = document.getElementById("102");
+  const v103 = document.getElementById("103");
   v102.style = "stroke-dasharray: " + (c100 / data["MasterValues"][0]["maxvalue"] * 100.0).toString() + ", 100;";
+  v103.style = "stroke-dasharray: " + (todayA.length / data["MasterValues"][0]["maxvalue"] * 100.0).toString() + ", 100; stroke: #ff0000; stroke-dashoffset: -" + ((c100 - todayA.length) / data["MasterValues"][0]["maxvalue"] * 100.0).toString() + ";";
   const v200 = document.getElementById("200");
   v200.innerText = (data["MasterValues"][30]["maxvalue"] + totalARPS).toString();
   const v201 = document.getElementById("201");
@@ -176,7 +178,9 @@ function displayData(data) {
   const v501 = document.getElementById("501");
   v501.innerText = "+" + todayO.length.toString();
   const v502 = document.getElementById("502");
+  const v503 = document.getElementById("503");
   v502.style = "stroke-dasharray: " + (c101 / data["MasterValues"][10]["maxvalue"] * 100.0).toString() + ", 100;";
+  v503.style = "stroke-dasharray: " + (todayO.length / data["MasterValues"][0]["maxvalue"] * 100.0).toString() + ", 100; stroke: #ff0000; stroke-dashoffset: -" + ((c101 - todayO.length) / data["MasterValues"][0]["maxvalue"] * 100.0).toString() + ";";
   const v600 = document.getElementById("600");
   v600.innerText = (data["MasterValues"][41]["maxvalue"] + totalORPS).toString();
   const v601 = document.getElementById("601");
