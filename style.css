@@ -91,5 +91,5 @@ body {
 }
 
 .fixed-text13 {
-  position: absolute; top: 34px; left: 0; margin: 0; text-align: center; width: 100%; font-size: 18px; overflow: hidden;
+  position: absolute; top: 34px; left: 0; margin: 0; text-align: center; width: 100%; font-size: 18px; height: 216px; overflow: hidden;
 }
