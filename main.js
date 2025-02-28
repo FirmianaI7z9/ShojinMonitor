@@ -20,9 +20,16 @@ async function fetchData(url, options) {
 }
 
 function displayData(data) {
-  console.log(data);
-  const today = new Date();
-  
+  let url = new URL(window.location.href);
+  let params = url.searchParams;
+  var dates = Number(params.get("i"));
+
+  var today = new Date();
+  var beforeday = new Date();
+  beforeday.setDate(beforeday.getDate() - dates);
+  const bday = beforeday.getTime(); 
+  today = today.getTime();
+
   // Atcoder
   var todayA = [];
   var totalARPS = 0, todayARPS = 0;
@@ -33,8 +40,8 @@ function displayData(data) {
     totalARPS += data["AtCoder"][i]["RP"];
     totalADS += data["AtCoder"][i]["difficulty"];
     totaldiffA[getColor(data["AtCoder"][i]["difficulty"])]++;
-    const thisdate = new Date(data["AtCoder"][i]["date"]);
-    if (today.toDateString() === thisdate.toDateString()) {
+    const thisdate = new Date(data["AtCoder"][i]["date"]).getTime();
+    if (today >= thisdate && thisdate >= bday) {
       todayA.push(data["AtCoder"][i]);
       todayARPS += data["AtCoder"][i]["RP"];
       todayADS += data["AtCoder"][i]["difficulty"];
@@ -164,7 +171,7 @@ function displayData(data) {
     totalODS += data["OMC"][i]["difficulty"];
     totaldiffO[getColor(data["OMC"][i]["difficulty"])]++;
     const thisdate = new Date(data["OMC"][i]["date"]);
-    if (today.toDateString() === thisdate.toDateString()) {
+    if (today >= thisdate && thisdate >= bday) {
       todayO.push(data["OMC"][i]);
       todayORPS += data["OMC"][i]["RP"];
       todayODS += data["OMC"][i]["difficulty"];
